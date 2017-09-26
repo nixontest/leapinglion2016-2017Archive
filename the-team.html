@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<title>Leaping Lion Books</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  	<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  	<link rel="stylesheet" type="text/css" href="css/main.css">
+  	<link rel="icon" type="image/jpg" href="images/yorku.jpg">
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="js/parallax.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<div class="jumbotron text-center parallax-window" data-parallax="scroll" data-image-src="images/llb-logo.png">
+  		<img src="images/llb-logo.png" alt"logo" height="372" width="333">
+	</div>
+
+		<div class="container text-center">
+			<h2>Our Team</h2>
+				<br>
+				<p><strong>Mike O'Connor</strong> - <i>Director</i></p>
+				<br>
+				<h4>Team One</h4>
+				<p><strong>Jessia Arsenio</strong> - <i>Publisher</i></p>
+				<p><strong>Katerina LeBlanc</strong> - <i>Publisher</i></p>
+				<p><strong>Emylee Kahr</strong> - <i>Assistant Publisher, Marketing Manager, Copyeditor, Business Director</i></p>
+				<p><strong>Camellia De Castro</strong> - <i>Assistant Publisher, Designer</i></p>
+				<p><strong>Alex Legard</strong> - <i>Assistant Publisher, Assistant Design Director, Production Director</i></p>
+				<p><strong>Bianca Ricci</strong> - <i>Editorial Director, Marketing Director</i></p>
+				<p><strong>Marina Green</strong> - <i>Assistant Editor, Web Director, Design Director</i></p>
+				<p><strong>Carlos Meneses</strong> - <i>Assistant Editor, Marketing Manager</i></p>
+				<p><strong>Lily Lumsden</strong> - <i>Copyeditor, Assiatant Web Director</i></p>
+				<p><strong>Kendra Codrington</strong> - <i>Copyeditor, Assistant Design Director, Web Designer</i></p>
+				<p><strong>Jenny Mao</strong> - <i>Marketing Director, Business Manager, Copyeditor, Designer</i></p>
+				<p><strong>Nicole Yanqui</strong> - <i>Assistant Producer, Design Director, Traffic Manager, Web Director</i></p>
+				<p><strong>Christine Hawryluk</strong> - <i>Designer, Assistant Producer, Assistant Design Director</i></p>
+				<br>
+				<h4>Team Two</h4>
+				<p><strong>Paige Gunning</strong> - <i>Publisher</i></p>
+				<p><strong>Carly Oakman</strong> - <i>Associate Publisher</i></p>
+				<p><strong>Ian Tushingham</strong> - <i>Assistant Publisher, Copyeditor</i></p>
+				<p><strong>Mustapha Safadieh</strong> - <i>Assistant Publisher, Copyeditor, Assistant Editor</i></p>
+				<p><strong>Alina Stecko</strong> - <i>Traffic Manager, Assistant Design Director, Assistant Editor</i></p>
+				<p><strong>Becky Friedman</strong> - <i>Editorial Director, Design Director</i></p>
+				<p><strong>Razan Waez</strong> - <i>Assistant Editor, Marketing Manager</i></p>
+				<p><strong>Yasmina Jaksic</strong> - <i>Assistant Editor, Assistant Design Director</i></p>
+				<p><strong>Elyssia Giancola</strong> - <i>Copyeditor, Traffic Manager</i></p>
+				<p><strong>Victoria Gooding</strong> - <i>Copyeditor, Assistant Web Director</i></p>
+				<p><strong>Keelan DuBois</strong> - <i>Production Director, Business Director</i></p>
+				<p><strong>Brianne Stephen</strong> - <i>Design Director, Editorial Director</i></p>
+				<p><strong>Hannah Kastoryano</strong> - <i>Marketing Director, Copyeditor</i></p>
+				<p><strong>Michelina Tersigni</strong> - <i>Marketing Manager, Web Designer</i></p>
+				<p><strong>John Lantz</strong> - <i>Marketing Director, Web Director and Designer</i></p>
+				<p><strong>Monica Espinoza</strong> - <i>Business Manager, Assistant Production Manager</i></p>
+				<p><strong>Nathan Moore</strong> - <i>Web Director, Rights Director, Marketing Manager</i></p>
+				<p><strong>Kira Harkonen</strong> - <i>Web Director and Designer, Marketing Manager, Copyeditor</i></p>
+			
+		</div>
+
+	<footer class="container-fluid text-center">
+  		<a href="#myPage" title="To Top">
+    		<span class="glyphicon glyphicon-chevron-up"></span>
+ 		</a>
+  		<p>© Copyright Leaping Lion Books</p>
+		<p>An Extension of York University</a></p>
+		<p style="color: #ddd;">MMXVI</p>		
+	</footer>
+	<script>
+		$(document).ready(function(){
+  			// Add smooth scrolling to all links in navbar + footer link
+  			$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    			// Prevent default anchor click behavior
+    			event.preventDefault();
+    			// Store hash
+    			var hash = this.hash;
+    			// Using jQuery's animate() method to add smooth page scroll
+    			// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    			$('html, body').animate({
+      				scrollTop: $(hash).offset().top
+    			}, 900, function(){
+      				// Add hash (#) to URL when done scrolling (default click behavior)
+      				window.location.hash = hash;
+    			});
+  			});
+  			$(window).scroll(function() {
+    			$(".slideanim").each(function(){
+      				var pos = $(this).offset().top;
+      				var winTop = $(window).scrollTop();
+        			if (pos < winTop + 600) {
+          				$(this).addClass("fadeInUp");
+        			}
+   	 			});
+  			});
+		})
+	</script>
+</body>
+</html>
